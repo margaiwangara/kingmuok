@@ -49,6 +49,10 @@ header {
         color: $secondary;
         font-weight: 700;
       }
+
+      .nav__link:hover {
+        color: $tertiary;
+      }
     }
   }
 }
@@ -146,6 +150,30 @@ header {
         background: $primary;
         display: block;
       }
+
+      .image--holder {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        flex-basis: 90%;
+        background: url("../images/guitar_two.jpg") no-repeat 100% 100% / cover;
+        position: relative;
+        background-blend-mode: multiply;
+        img {
+          width: 100%;
+          display: none;
+        }
+      }
+
+      .image--holder:after {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        content: "";
+        background: rgba(194, 170, 94, 0.3);
+      }
     }
 
     .main__right {
@@ -235,4 +263,9 @@ header {
   letter-spacing: 0.08rem;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.cbtn:hover {
+  background: $tertiary;
+  color: $secondary;
 }

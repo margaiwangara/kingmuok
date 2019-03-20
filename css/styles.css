@@ -38,6 +38,8 @@ header {
         padding: 0.5rem 1rem;
         color: #343943;
         font-weight: 700; }
+      header .nav .navbar--nav .nav__link:hover {
+        color: #c2aa5e; }
 
 #main {
   width: 100%;
@@ -114,6 +116,25 @@ header {
         margin: 0 -1rem;
         background: #ebf3df;
         display: block; }
+      #main .main--inner .main__center .image--holder {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        flex-basis: 90%;
+        background: url("../images/guitar_two.jpg") no-repeat 100% 100%/cover;
+        position: relative;
+        background-blend-mode: multiply; }
+        #main .main--inner .main__center .image--holder img {
+          width: 100%;
+          display: none; }
+      #main .main--inner .main__center .image--holder:after {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        content: "";
+        background: rgba(194, 170, 94, 0.3); }
     #main .main--inner .main__right {
       flex: 1;
       display: flex;
@@ -182,3 +203,7 @@ header {
   letter-spacing: 0.08rem;
   font-size: 1rem;
   cursor: pointer; }
+
+.cbtn:hover {
+  background: #c2aa5e;
+  color: #343943; }
