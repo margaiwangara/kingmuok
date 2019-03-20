@@ -1,0 +1,238 @@
+$primary: #ebf3df;
+$secondary: #343943;
+$tertiary: #c2aa5e;
+$background: #222222;
+$text-color: #b4b7b6;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $primary !important;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3.5rem;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .nav {
+    padding: 1rem;
+    border: solid 8px $tertiary;
+    box-sizing: border-box;
+    background: $primary;
+    z-index: 1;
+    .navbar--nav {
+      list-style: none;
+      line-height: 1.75;
+      text-align: center;
+      .nav__link {
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        color: $secondary;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#main {
+  width: 100%;
+  min-height: 100%;
+
+  .main--inner {
+    width: 100%;
+    height: 100%;
+    margin-top: -4rem;
+    display: flex;
+
+    .main__left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      line-height: 1.35;
+      padding-top: 15rem;
+
+      .content--holder {
+        margin: 1rem 0;
+      }
+      .heading__ms {
+        font-size: 1.85rem;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+        color: $text-color;
+        font-weight: 600;
+      }
+
+      .heading__md {
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        color: $secondary;
+        text-transform: capitalize;
+      }
+
+      .main__left__text {
+        font-size: 0.85rem;
+        letter-spacing: 0.05rem;
+        line-height: 1.5;
+      }
+
+      .cbtn {
+        width: 70%;
+        position: relative;
+      }
+
+      .cbtn:after {
+        width: 0;
+        height: 0;
+        border-left: 20.5px solid $tertiary;
+        border-top: 20.5px solid transparent;
+        border-bottom: 20.5px solid transparent;
+        position: absolute;
+        content: "";
+        top: 1px;
+        bottom: 0;
+        right: 0;
+        margin-right: -21.5px;
+      }
+    }
+
+    .main__center {
+      flex: 2;
+      line-height: 1.25;
+      display: flex;
+      flex-direction: column;
+      padding: 4.5rem 0;
+      box-sizing: border-box;
+      border: solid 8px $tertiary;
+      text-align: center;
+      .heading__md {
+        font-size: 5rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        color: $secondary;
+        text-transform: capitalize;
+        display: block;
+        margin: 0 -1rem;
+        background: $primary;
+      }
+
+      .heading__sm {
+        color: $tertiary;
+        font-weight: 600;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin: 0 -1rem;
+        background: $primary;
+        display: block;
+      }
+    }
+
+    .main__right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      line-height: 1.1;
+      padding-top: 15rem;
+      box-sizing: border-box;
+      padding: 0 1rem;
+
+      .heading__ms {
+        color: $tertiary;
+        font-weight: 600;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        font-size: 1.25rem;
+      }
+
+      .album {
+        width: 100%;
+        margin: 1.5rem 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        .album--art {
+          width: 100%;
+          height: 200px;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+        }
+
+        .album--body {
+          box-sizing: border-box;
+          padding: 1rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          line-height: 1.5;
+          background: $secondary;
+          color: $text-color;
+
+          .heading__md {
+            text-transform: capitalize;
+            letter-spacing: 0.05rem;
+            font-size: 1.1rem;
+          }
+
+          .heading__sm {
+            font-size: 0.75rem;
+            letter-spacing: 0.025rem;
+            font-weight: 400;
+          }
+
+          .link--n {
+            color: $tertiary;
+            text-transform: capitalize;
+            letter-spacing: 0.03rem;
+            border-top: dashed 1px $text-color;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0;
+            font-weight: 600;
+          }
+          .link--n:hover {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cbtn {
+  background: $secondary;
+  border: none;
+  padding: 0.8rem;
+  text-transform: uppercase;
+  color: $tertiary;
+  font-weight: 600;
+  margin: 1rem 0;
+  letter-spacing: 0.08rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
