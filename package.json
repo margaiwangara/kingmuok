@@ -1,12 +1,33 @@
 {
   "name": "kingmuok-static",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Landing page design concept for a musician",
+  "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Margai Wangara <margaiwangara@gmail.com>",
+  "license": "Unlicense",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-nightly.748",
+    "autoprefixer": "^10.2.6",
+    "parcel": "^2.0.0-nightly.746",
+    "postcss": "^8.1.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 1%",
+          "last 4 versions",
+          "ie >= 9"
+        ]
+      }
+    }
+  },
+  "targets": {
+    "main": false
+  }
 }
