@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 $primary: #ebf3df;
 $secondary: #343943;
 $tertiary: #c2aa5e;
@@ -10,14 +12,20 @@ $text-color: #b4b7b6;
 }
 
 body {
-  background: $primary !important;
+  background: $primary;
   width: 100%;
   min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+button,
+input[type='text'],
+input[type='email'] {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 #wrapper {
@@ -40,14 +48,15 @@ header {
     background: $primary;
     z-index: 1;
     .navbar--nav {
-      list-style: none;
+      list-style-type: none;
       line-height: 1.75;
       text-align: center;
       .nav__link {
         text-transform: uppercase;
         padding: 0.5rem 1rem;
         color: $secondary;
-        font-weight: 700;
+        // font-weight: 700;
+        font-weight: 500;
       }
 
       .nav__link:hover {
@@ -81,14 +90,14 @@ header {
       .heading__ms {
         font-size: 1.85rem;
         text-transform: capitalize;
-        letter-spacing: 0.1rem;
+        // letter-spacing: 0.1rem;
         color: $text-color;
         font-weight: 600;
       }
 
       .heading__md {
         font-size: 2.2rem;
-        letter-spacing: 0.1rem;
+        // letter-spacing: 0.1rem;
         font-weight: 600;
         color: $secondary;
         text-transform: capitalize;
@@ -96,27 +105,27 @@ header {
 
       .main__left__text {
         font-size: 0.85rem;
-        letter-spacing: 0.05rem;
+        // letter-spacing: 0.05rem;
         line-height: 1.5;
       }
 
       .cbtn {
         width: 70%;
         position: relative;
-      }
 
-      .cbtn:after {
-        width: 0;
-        height: 0;
-        border-left: 20.5px solid $tertiary;
-        border-top: 20.5px solid transparent;
-        border-bottom: 20.5px solid transparent;
-        position: absolute;
-        content: "";
-        top: 1px;
-        bottom: 0;
-        right: 0;
-        margin-right: -21.5px;
+        &::after {
+          width: 0;
+          height: 0;
+          border-left: 20.5px solid $tertiary;
+          border-top: 20.5px solid transparent;
+          border-bottom: 20.5px solid transparent;
+          position: absolute;
+          content: '';
+          top: 1px;
+          bottom: 0;
+          right: 0;
+          margin-right: -21.5px;
+        }
       }
     }
 
@@ -131,7 +140,7 @@ header {
       text-align: center;
       .heading__md {
         font-size: 5rem;
-        letter-spacing: 0.1rem;
+        // letter-spacing: 0.1rem;
         font-weight: 600;
         color: $secondary;
         text-transform: capitalize;
@@ -143,7 +152,7 @@ header {
       .heading__sm {
         color: $tertiary;
         font-weight: 600;
-        letter-spacing: 0.15rem;
+        // letter-spacing: 0.15rem;
         text-transform: uppercase;
         font-size: 1rem;
         margin: 0 -1rem;
@@ -156,7 +165,7 @@ header {
         margin: 0 auto;
         margin-top: 3rem;
         flex-basis: 90%;
-        background: url("../images/guitar_two.jpg") no-repeat 100% 100% / cover;
+        background: url('../images/guitar_two.jpg') no-repeat 100% 100% / cover;
         position: relative;
         background-blend-mode: multiply;
         img {
@@ -171,7 +180,7 @@ header {
         left: 0;
         top: 0;
         width: 100%;
-        content: "";
+        content: '';
         background: rgba(194, 170, 94, 0.3);
       }
     }
@@ -190,7 +199,7 @@ header {
         color: $tertiary;
         font-weight: 600;
         text-transform: capitalize;
-        letter-spacing: 0.1rem;
+        // letter-spacing: 0.1rem;
         text-align: center;
         font-size: 1.25rem;
       }
@@ -221,30 +230,34 @@ header {
           line-height: 1.5;
           background: $secondary;
           color: $text-color;
+          // justify-content: flex-start;
 
           .heading__md {
             text-transform: capitalize;
-            letter-spacing: 0.05rem;
+            // letter-spacing: 0.05rem;
             font-size: 1.1rem;
           }
 
           .heading__sm {
             font-size: 0.75rem;
-            letter-spacing: 0.025rem;
+            // letter-spacing: 0.025rem;
             font-weight: 400;
           }
 
           .link--n {
             color: $tertiary;
             text-transform: capitalize;
-            letter-spacing: 0.03rem;
             border-top: dashed 1px $text-color;
+            // letter-spacing: 0.03rem;
             padding: 0.5rem 0;
             margin: 0.5rem 0;
             font-weight: 600;
-          }
-          .link--n:hover {
-            color: $text-color;
+            display: block;
+            // align-self: center;
+
+            &:hover {
+              color: $text-color;
+            }
           }
         }
       }
@@ -260,7 +273,7 @@ header {
   color: $tertiary;
   font-weight: 600;
   margin: 1rem 0;
-  letter-spacing: 0.08rem;
+  // letter-spacing: 0.08rem;
   font-size: 1rem;
   cursor: pointer;
 }
