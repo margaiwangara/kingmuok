@@ -73,12 +73,22 @@ jobs:
         run: ls -R
         working-directory: build
 
-      - uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      - uses: appleboy/scp-action@master
         with:
-          server: '${{ secrets.FTP_SERVER }}'
-          username: '${{ secrets.FTP_USERNAME }}'
-          password: '${{ secrets.FTP_PASSWORD }}'
-          protocol: ftps
-          port: 21
-          local-dir: build/
-          server-dir: portfolio/muziki/
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          source: 'build/*'
+          target: ${{ secrets.TARGET_DIR }}
+          strip_components: 1
+          overwrite: true
+
+      # - uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      #   with:
+      #     server: '${{ secrets.FTP_SERVER }}'
+      #     username: '${{ secrets.FTP_USERNAME }}'
+      #     password: '${{ secrets.FTP_PASSWORD }}'
+      #     protocol: ftps
+      #     port: 21
+      #     local-dir: build/
+      #     server-dir: portfolio/muziki/
