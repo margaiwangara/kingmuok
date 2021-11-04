@@ -5,7 +5,8 @@
   "main": "dist/index.html",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "build-ci": "parcel build src/index.html --public-url ./portfolio/muziki/"
   },
   "keywords": [
     "muziki",
